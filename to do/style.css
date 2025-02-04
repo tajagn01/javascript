@@ -1,0 +1,42 @@
+body{
+    background-color: #3B6790;
+}
+div{
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    justify-content: center;
+    text-align: center;
+    color: #EFB036;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#addtask{
+   color: black;
+   background-color: #EFB036;
+   width: 150px;
+   height: 150px;
+   border: 2px solid black;
+   border-radius: 15px;
+   padding: 6px;
+   text-align: center;
+   justify-content: center;
+   font-weight: bold;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#textinput{
+
+    width: 80%;
+    height: 30px;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
