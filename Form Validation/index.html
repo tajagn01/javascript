@@ -1,0 +1,16 @@
+<form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+  function validateForm() {
+    const email = document.getElementById("email").value;
+    if (!email.includes("@")) {
+      alert("Enter a valid email.");
+      return false;
+    }
+    return true;
+  }
+  </script>
+  

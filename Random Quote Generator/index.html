@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <blockquote id="quote"></blockquote>
+    <button onclick="newQuote()">New Quote</button>
+    <script>
+        const quotes = [
+            "Stay hungry, stay foolish.",
+            "Code is like humor. When you have to explain it, it’s bad.",
+            "First, solve the problem. Then, write the code.",
+            "Experience is the name everyone gives to their mistakes.",
+            "In order to be irreplaceable, one must always be different.",
+            "Java is to JavaScript what car is to Carpet.",
+            "Knowledge is power.",
+            "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.",
+            "Simplicity is the soul of efficiency.",
+            "Fix the cause, not the symptom."
+        ];
+
+        function newQuote() {
+            const index = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[index];
+        }
+
+        newQuote();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <input type="text" id="sciDisplay" aria-label="Calculator Display" oninput="validateInput()">
+    <br>
+    <button onclick="sciAppend('Math.sin(')" aria-label="Sine Function">sin</button>
+    <button onclick="sciAppend('Math.cos(')" aria-label="Cosine Function">cos</button>
+    <button onclick="sciAppend('Math.sqrt(')" aria-label="Square Root">√</button>
+    <button onclick="sciAppend(')')" aria-label="Close Parenthesis">)</button>
+    <button onclick="sciClear()" aria-label="Clear Display">C</button>
+    <button onclick="sciCalculate()" aria-label="Calculate Result">=</button>
+    <script>
+        const sciDisplay = document.getElementById("sciDisplay");
+
+        function sciAppend(val) {
+            sciDisplay.value += val;
+        }
+
+        function sciClear() {
+            sciDisplay.value = "";
+        }
+
+        function sciCalculate() {
+            try {
+                // Use Function constructor for safer evaluation
+                const result = new Function(`return ${sciDisplay.value}`)();
+                sciDisplay.value = result;
+            } catch {
+                sciDisplay.value = "Error";
+            }
+        }
+
+        function validateInput() {
+            // Allow only valid characters for mathematical expressions
+            sciDisplay.value = sciDisplay.value.replace(/[^0-9+\-*/().Mathsqrtcosin]/g, '');
+        }
+    </script>
+</body>
+</html>
