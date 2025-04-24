@@ -1,4 +1,4 @@
-console.log('hi lode')
+
 let count = 0;
  const counterelement = document.getElementById('counter');
  const incrementbutton =document.getElementById('increment');
