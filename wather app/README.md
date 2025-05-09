@@ -22,7 +22,7 @@ A modern, responsive weather application built with HTML, CSS, and JavaScript th
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
+[git clone [your-repository-url]](https://github.com/tajagn01/javascript.git)
 ```
 
 2. Get an API key from [OpenWeatherMap](https://openweathermap.org/api)
